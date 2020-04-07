@@ -9,8 +9,6 @@ class PeopleRequestSerializer(serializers.ModelSerializer):
 
 class RequestDetailSerializer(serializers.ModelSerializer):
 
-    request = PeopleRequestSerializer()
-
     class Meta:
         model = RequestDetail
         exclude = []

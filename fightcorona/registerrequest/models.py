@@ -18,8 +18,9 @@ request_status_options = (
 )
 
 food_grocery_type_options = (
-    ('food', 'Food'),
-    ('grocery', 'Grocery'),
+    ('requestFood', 'Food'),
+    ('requestGrocery', 'Grocery'),
+    ('requestBoth', 'Both'),
 )
 
 class PeopleRequest(models.Model):
