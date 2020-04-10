@@ -35,8 +35,9 @@ class PeopleRequest(models.Model):
 class RequestDetail(models.Model):
     request = models.OneToOneField(PeopleRequest, related_name='request_detail', blank=False,
                                    on_delete=models.deletion.CASCADE)
-    no_of_people = models.IntegerField()
+    no_of_people = models.IntegerField(blank=True, null=True)
     food_grocery_type = models.CharField(blank=True, null=True, choices=food_grocery_type_options, max_length=250)
     food_grocery_type_detail = models.CharField(blank=True, null=True, max_length=250)
     medicine_request_detail = models.CharField(blank=True, null=True, max_length=250)
+    feeling_sick_detail = models.CharField(blank=True, null=True, max_length=250)
     feeling_sick = models.BooleanField(blank=True, null=True)

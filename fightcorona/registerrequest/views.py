@@ -54,6 +54,7 @@ class PeopleRequestView(APIView):
                 'food_grocery_type_detail': payload.get('food_grocery_type_detail'),
                 'medicine_request_detail': payload.get('medicine_request_detail'),
                 'feeling_sick': payload.get('feeling_sick'),
+                'feeling_sick_detail': payload.get('feeling_sick_detail'),
             }
 
             # saving request entry in DB first.
