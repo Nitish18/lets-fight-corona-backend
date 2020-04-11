@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from registerrequest.views import PeopleRequestView
+from registerrequest.dashboard_view import RequestDashboardView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('peopleRequest/', PeopleRequestView.as_view())
+    path('peopleRequest/', PeopleRequestView.as_view()),
+    path('dashboard/', RequestDashboardView.as_view()),
 ]

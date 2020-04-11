@@ -28,7 +28,11 @@ class PeopleRequestView(APIView):
                 all_requests = all_requests.filter(pin_code=pin_code)
 
             all_request_serializer = PeopleRequestSerializer(all_requests, many=True)
-            return Response(all_request_serializer.data, status=200)
+            return Response({
+                    'data': all_request_serializer.data,
+                    'total_count': len(all_request_serializer.data)
+                },
+                status=200)
         except Exception as e:
             logger.error("Some error occurred - {}".format(str(e)))
             return Response({
